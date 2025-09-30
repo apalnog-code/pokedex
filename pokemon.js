@@ -198,8 +198,15 @@ function main(){
     }
 
     if(btnVolver){
-        btnVolver.addEventListener("click", function(){
-            window.location.reload();
+        btnVolver.addEventListener("click", function(e){
+            e.preventDefault();
+            pokemonsTipoDIV.classList.add("nover");
+            infoPokemonDIV.classList.add("nover");
+            btNListado.classList.add("nover");
+
+            tiposDIV.classList.remove("nover");
+            pokemonsTipoDIV.innerHTML = "";
+            infoPokemonDIV.innerHTML = "";
         });
     }
 
